@@ -1,4 +1,4 @@
 <div class="container ">
-    <app-header></app-header>
-    <app-tasks></app-tasks>
+        <app-header (onToggleAddTask)="toggleAddTask()"></app-header>
+        <app-tasks [showAddTask]="showAddTask()"></app-tasks> 
 </div>

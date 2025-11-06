@@ -14,5 +14,11 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './app.css'
 })
 export class App {
-  
+  // Add a state variable (signal) to control form visibility
+  showAddTask = signal<boolean>(false);
+
+  // Method to toggle the state
+  toggleAddTask() {
+    this.showAddTask.update(value => !value);
+  }
 }

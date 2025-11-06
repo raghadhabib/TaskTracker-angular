@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,input } from '@angular/core';
 import { TaskService } from '../../services/task-service';
 import {Task} from '../../Task';
 import { TasKItem } from "../tas-k-item/tas-k-item";
@@ -11,7 +11,7 @@ import { AddTask } from "../add-task/add-task";
   styleUrl: './tasks.css'
 })
 export class Tasks {
-  
+  showAddTask = input.required<boolean>();
 
   tasks :Task[] = [];
 
@@ -20,6 +20,11 @@ export class Tasks {
       this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
 }
 
+addTask(task: Task) {
+      this.taskService.addTask(task).subscribe((newTask) => {
+        this.tasks.push(newTask);
+      });
+    }
 
     deleteTask(task: Task) {
       this.taskService

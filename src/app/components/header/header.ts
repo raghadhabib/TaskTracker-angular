@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { Button } from "../button/button";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
+
 
 @Component({
   selector: 'app-header',
@@ -12,8 +14,9 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 export class Header {
   title :string = "Task Tracker";
   faPlus = faPlus;
+  onToggleAddTask = output<void>(); 
 
-  toggoleAddTask(){
-    console.log("Toggle");
-  }
+  toggoleAddTask(){
+    this.onToggleAddTask.emit();
+  }
 }
