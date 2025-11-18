@@ -1,14 +1,14 @@
 import { Component,input } from '@angular/core';
-import { TaskService } from '../../services/task-service';
-import {Task} from '../../Task';
+import { TaskService } from "../../core/services/task-service";
+import {Task} from '../../core/models/Task';
 import { TasKItem } from "../../shared/tas-k-item/tas-k-item";
 import { AddTask } from "../../shared/add-task/add-task";
 
 @Component({
   selector: 'app-tasks',
   imports: [TasKItem, AddTask],
-  templateUrl: './tasks.html',
-  styleUrl: './tasks.css'
+  templateUrl: './tasks-page.html',
+  styleUrl: './tasks-page.css'
 })
 export class Tasks {
   showAddTask = input.required<boolean>();

@@ -1,5 +1,5 @@
 import { Component, output } from '@angular/core';
-import { Button } from "../button/button";
+import { Button } from '../../shared/button/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
