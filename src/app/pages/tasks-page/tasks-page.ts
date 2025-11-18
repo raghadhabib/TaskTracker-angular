@@ -1,8 +1,8 @@
 import { Component,input } from '@angular/core';
 import { TaskService } from '../../services/task-service';
 import {Task} from '../../Task';
-import { TasKItem } from "../tas-k-item/tas-k-item";
-import { AddTask } from "../add-task/add-task";
+import { TasKItem } from "../../shared/tas-k-item/tas-k-item";
+import { AddTask } from "../../shared/add-task/add-task";
 
 @Component({
   selector: 'app-tasks',
